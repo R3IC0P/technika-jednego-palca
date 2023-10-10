@@ -1,0 +1,232 @@
+:root {
+  --clr-primary: hsl(0, 100%, 50%);
+  --clr-primary-dark: hsl(0, 100%, 23%);
+  --clr-neutral-light: hsl(0, 0%, 96%);
+  --clr-neutral-dark: hsl(0, 0%, 0%);
+  --clr-neutral: hsl(0, 0%, 20%);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+li {
+  padding-block: 8px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--clr-neutral-light);
+  background-image: url(list-icon.png);
+  background-size: contain;
+  background-position: 165%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+header {
+  background-color: var(--clr-neutral);
+  color: var(--clr-neutral-light);
+  text-align: center;
+}
+
+header h1 {
+  margin-top: 64px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  margin: 0 auto 48px auto;
+  background-color: var(--clr-neutral-dark);
+}
+
+.shuriken {
+  display: inline-block;
+  width: 30px;
+  aspect-ratio: 1;
+  margin: 0 8px;
+  background-image: url(list-icon.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.main-nav a {
+  padding: 8px 16px;
+  text-decoration: none;
+  color: var(--clr-neutral-light);
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  border-bottom: 2px solid var(--clr-primary-dark);
+  background-color: var(--clr-neutral-dark);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section {
+  margin-block: 64px;
+}
+
+.section--first {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title {
+  padding-block: 16px;
+  font-size: 2.5rem;
+  text-align: center;
+  color: var(--clr-primary-dark);
+}
+
+.section-description {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.skills-list {
+  list-style-type: none;
+  margin-top: 16px;
+}
+
+.skills-list li {
+  position: relative;
+  margin-block: 16px;
+}
+
+.skills-list li:nth-child(2),
+.skills-list li:nth-child(4) {
+  margin-left: 128px;
+}
+
+.skills-list li::before {
+  content: '';
+  position: absolute;
+  left: -24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-image: url(list-icon.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.card {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 16px 24px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--clr-neutral-light);
+  background-color: var(--clr-neutral);
+}
+
+.card-title {
+  padding: 16px;
+}
+
+.card-button,
+.signup-form button {
+  border: none;
+  outline: none;
+  margin-top: 24px;
+  padding: 16px 32px;
+  font-size: 0.9rem;
+  color: var(--clr-primary-dark);
+  background-color: var(--clr-neutral-light);
+}
+
+.card-button:hover,
+.signup-form button:hover {
+  cursor: pointer;
+  color: var(--clr-neutral-light);
+  background-color: var(--clr-primary-dark);
+}
+
+.signup-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 1fr;
+  margin-top: 64px;
+  padding: 24px;
+  color: var(--clr-neutral-light);
+  background-color: var(--clr-neutral);
+}
+
+.signup-form h2 {
+  grid-column: span 2;
+  padding: 8px 0;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.signup-form__left-side {
+  display: grid;
+}
+
+.signup-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 0 16px;
+}
+
+.signup-form input {
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.signup-form p {
+  padding: 16px 0;
+}
+
+.signup-form button {
+  max-width: 10rem;
+  margin: 16px auto;
+}
+
+.signup-form img {
+  width: 100%;
+}
+
+footer {
+  background-color: var(--clr-neutral);
+  color: var(--clr-neutral-light);
+  text-align: center;
+  padding: 16px;
+}
